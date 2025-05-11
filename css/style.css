@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #262323;
+}
+
+/* Heading below navbar */
+.WhyEggLabelsMatterMoreThanYouThink {
+  width: 100%;
+  color: #DA5B01;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+  word-wrap: break-word;
+  padding: 40px 20px;
+  text-align: center;
+  
+  /* Add margin-top to push heading below navbar */
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: black;
+  border-bottom: 1px solid #eee; /* optional: subtle separator */
+}
+
+.nav-links a {
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin: 0 12px;
+  position: relative;
+  transition: transform 0.1s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #DA5B01;
+}
+
+.nav-links a:active {
+  transform: scale(0.95); /* subtle press animation */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* adjust spacing from text */
+  width: 100%;
+  height: 4px;
+  background-color: #DA5B01;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Show rounded underline */
+.nav-links a.active::after,
+.nav-links a:focus::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 552px; /* same as SVG */
+  overflow: hidden;
+}
+
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.hero-text {
+  max-width: 50%;
+  color: #DA5B01;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: 'Lexend', sans-serif;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  padding: 20px 32px;
+  background: #F4B137;
+  border: none;
+  border-radius: 40px;
+  font-size: 24px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 258.5px;
+}
