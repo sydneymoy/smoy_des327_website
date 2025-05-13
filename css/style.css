@@ -2,10 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #262323;
+  background-color: #FFF9F3;
 }
 
-/* Heading below navbar */
 .WhyEggLabelsMatterMoreThanYouThink {
   width: 100%;
   color: #DA5B01;
@@ -16,9 +15,7 @@ body {
   word-wrap: break-word;
   padding: 40px 20px;
   text-align: center;
-  
-  /* Add margin-top to push heading below navbar */
-  margin-top: 80px; /* Adjust based on navbar height */
+  margin-top: 80px; 
 }
 
 .navbar {
@@ -35,7 +32,7 @@ body {
   font-weight: 500;
   line-height: 30px;
   color: black;
-  border-bottom: 1px solid #eee; /* optional: subtle separator */
+  border-bottom: 1px solid #eee; 
 }
 
 .nav-links a {
@@ -54,14 +51,14 @@ body {
 }
 
 .nav-links a:active {
-  transform: scale(0.95); /* subtle press animation */
+  transform: scale(0.95); 
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -6px; /* adjust spacing from text */
+  bottom: -6px;
   width: 100%;
   height: 4px;
   background-color: #DA5B01;
@@ -72,56 +69,35 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Show rounded underline */
 .nav-links a.active::after,
 .nav-links a:focus::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 552px; /* same as SVG */
-  overflow: hidden;
-}
-
-.svg-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-}
-
-.hero-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
+.summary1 {
+  display: flex; /* Flex to keep the text and image side-by-side */
   justify-content: space-between;
   align-items: center;
   padding: 60px 80px;
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 
-.hero-text {
+.summarytext {
   max-width: 50%;
   color: #DA5B01;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.hero-text h1 {
+.summarytext h1 {
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-.hero-text p {
+.summarytext p {
   font-size: 24px;
   line-height: 36px;
   color: rgba(0, 0, 0, 0.75);
@@ -129,7 +105,7 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-text button {
+.summarytext button {
   padding: 20px 32px;
   background: #F4B137;
   border: none;
@@ -140,8 +116,52 @@ body {
   cursor: pointer;
 }
 
-.hero-image img {
-  max-width: 100%;
+.chicken-img {
   height: auto;
-  border-radius: 258.5px;
+  max-width: 100%;
+  width: 65%; /* Adjust the width of the chicken image */
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+.difference {
+  margin-top: 80px; /* Adds spacing between the summary section and the "WHAT'S THE DIFFERENCE?" section */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.difference h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #DA5B01;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.egg-types {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.egg-type {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust width for each egg type */
+}
+
+.egg-type h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #DA5B01;
+  margin-bottom: 12px;
+}
+
+.egg-type p {
+  font-size: 16px;
+  color: #333;
 }
